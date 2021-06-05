@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Footer from '../Components/Footer'
+import Footer from '../components/Footer'
 import Header from '../components/Header'
 import AboutSection from '../components/home/AboutSection'
 import IntroSection from '../components/home/IntroSection'
