@@ -6,7 +6,7 @@
 
 @import "variables";
 
-@import "../node_modules/bootstrap/scss/mixins";
+@import "mixins.scss";
 
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
