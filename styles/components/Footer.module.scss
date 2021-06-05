@@ -1,0 +1,17 @@
+.footer {
+    background: var(--bs-primary);
+    text-align: center;
+    color: var(--bs-white);
+    font-weight: 300;
+    .footerSocialIcon {
+        padding: 0.225rem!important;
+        transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .footerSocialIcon:hover {
+        cursor: pointer;
+        transform: rotateZ(360deg);
+    }
+    .footerTaglineText {
+        max-width: 250px;
+    }
+}

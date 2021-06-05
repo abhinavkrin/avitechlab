@@ -1,0 +1,33 @@
+@import '../../minimum.scss';
+.sectionTitle {
+    color: $primary;
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    font-weight: normal;
+    font-size: 32px;
+    margin: 1rem;
+}
+
+.sectionTitle::before {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 2px;
+    width: 100%;
+    max-width: 200px;
+    background: complement($primary-light);
+}
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -2.5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    border: 2px solid complement($primary-light);
+    background: #fff;
+}

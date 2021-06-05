@@ -1,0 +1,63 @@
+@import '../../minimum.scss';
+.introSection {
+    background-image:  url(./../../../public/images/mountains.webp);
+    min-height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    background-size: cover;
+    width: 100%;
+}
+.backgroundOverlay {
+    background:  rgba($primary-light,0.40);
+    width: inherit;
+    min-height: inherit;
+    mix-blend-mode: normal;
+    position: relative;
+}
+
+.introTextBlock {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5rem;
+    color: var(--bs-white-grey)
+}
+
+.introText1, .introText2 {
+    font-size: 39px;
+    font-weight: lighter;
+}
+
+.introText3 {
+    font-size: 20px;
+    max-width: 720px;
+    font-weight: lighter;
+}
+
+.introText2 {
+    width: fit-content;
+    position: relative;
+}
+.introText2::before {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 85%;
+    height: 3px;
+    background: complement($primary-light);
+    content: "";
+}
+
+@media(min-width: 768.1px){
+    .introTextBlock {
+        padding: 0 5rem;
+    }
+    .introText1, .introText2 {
+        font-size: 56px;
+    }
+    .introText3 {
+        font-size: 28px;
+    }
+}

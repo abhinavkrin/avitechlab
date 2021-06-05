@@ -1,0 +1,15 @@
+//Over variables here
+
+$primary: #1A3935;
+$primary-light:  lighten($primary,30%);//#048777;
+$white-grey: #f2f2f2;
+@import "../node_modules/bootstrap/scss/variables";
+
+
+$custom-colors: (
+  "grey2": #4F4F4F,
+  "primary-light": $primary-light,
+  "white-grey": $white-grey
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
