@@ -1,0 +1,75 @@
+@import '../../minimum.scss';
+
+.skillSection {
+    background: $white-grey-darker;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+.fixDividerContainer {
+    position: relative;
+}
+
+.skills {
+    background-color: #fff;
+    text-align: center;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    border: 1px solid $dividerColor;
+}
+
+@include media-breakpoint-up(lg){
+    .skillCol1, .skillCol2 {
+        border-right: 1px solid $dividerColor;
+    }
+}
+@include media-breakpoint-down(lg){
+    .skillCol1, .skillCol2 {
+        border-bottom: 1px solid $dividerColor;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.skillCol1:hover, .skillCol2:hover, .skillCol3:hover {
+    img {
+        animation: rotate 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        cursor: pointer;
+    }
+}
+
+.skillText {
+    color: $grey2;
+}
+
+.skillList ul {
+    list-style: none;
+    padding: 0;
+    color: $grey2;
+    line-height: 160%;
+}
+
+
+.skillH1 {
+    color: $primary;
+    font-size: 22px;
+}
+
+@media (min-width: 992px) {
+    .skillh1 {
+        color: $primary;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+.skillH2 {
+    color: $primary-light;
+}

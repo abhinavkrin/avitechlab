@@ -2,14 +2,18 @@
 
 $primary: #1A3935;
 $primary-light:  lighten($primary,30%);//#048777;
+$grey2: #4F4F4F;
 $white-grey: #f2f2f2;
+$white-grey-darker: #F7F7F7; 
+$dividerColor: #E5E5E5;
 @import "../node_modules/bootstrap/scss/variables";
 
 
 $custom-colors: (
-  "grey2": #4F4F4F,
+  "grey2": $grey2,
   "primary-light": $primary-light,
-  "white-grey": $white-grey
+  "white-grey": $white-grey,
+  "white-grey-darker": $white-grey-darker
 );
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
