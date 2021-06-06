@@ -1,7 +1,8 @@
+@import '../minimum';
 .footer {
     background: var(--bs-primary);
     text-align: center;
-    color: var(--bs-white);
+    color: $white-grey;
     font-weight: 300;
     .footerSocialIcon {
         padding: 0.225rem!important;
@@ -13,5 +14,33 @@
     }
     .footerTaglineText {
         max-width: 250px;
+    }
+    .contactDialog {
+        background: darken($color: $primary, $amount: 7);
+        border-radius: 15px;
+        // transform: translateY(-50%);
+        // -webkit-transform: translateY(-50%);
+        position: relative;
+        top: -50px;
+    }
+    .startProjectButton {
+        padding: .5rem 1rem;
+        border: 2px solid $white-grey;
+        color: $white-grey;
+        background-color: darken($color: $primary, $amount: 7);;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        transition: all .3s;
+    }
+    .startProjectButton:hover {
+        cursor: pointer;
+        background: $white-grey;
+        color: darken($color: $primary, $amount: 7);;
+    }
+    .startProject {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        text-align: center;
     }
 }
