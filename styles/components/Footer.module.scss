@@ -24,12 +24,12 @@
         top: -50px;
     }
     .startProjectButton {
-        padding: .5rem 1rem;
-        border: 2px solid $white-grey;
+        padding: .450rem 1rem;
+        border: 1px solid $white-grey;
         color: $white-grey;
         background-color: darken($color: $primary, $amount: 7);;
         border-radius: 10px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         transition: all .3s;
     }
     .startProjectButton:hover {
@@ -38,9 +38,17 @@
         color: darken($color: $primary, $amount: 7);;
     }
     .startProject {
-        font-size: 2rem;
+        font-size: 1.7rem;
         text-align: center;
         text-transform: uppercase;
         text-align: center;
+    }
+    @include media-breakpoint-down(sm) {
+        .startProject {
+            font-size: 1.4rem;
+        }
+        .startProjectButton {
+            font-size: 1rem;
+        }
     }
 }
