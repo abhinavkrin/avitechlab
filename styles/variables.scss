@@ -2,10 +2,12 @@
 
 $primary: #1A3935;
 $primary-light:  lighten($primary,30%);//#048777;
-$grey2: #4F4F4F;
+$grey2: #787878;//#4F4F4F;
 $white-grey: #f2f2f2;
 $white-grey-darker: #F7F7F7; 
 $dividerColor: #E5E5E5;
+$comp-primary: complement($primary);
+$comp-primary-light: complement($primary-light);
 @import "../node_modules/bootstrap/scss/variables";
 
 

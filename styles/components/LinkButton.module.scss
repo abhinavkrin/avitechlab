@@ -1,0 +1,16 @@
+@keyframes animvector1{
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(0.3rem,-0.3rem);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+.linkButton:hover {
+    .openIcon .vector2{
+        animation: animvector1 1s 1;
+    }
+}

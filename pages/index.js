@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import AboutSection from '../components/home/AboutSection'
 import IntroSection from '../components/home/IntroSection'
+import ProjectSection from '../components/home/ProjectSection.js'
 import SkillSection from '../components/home/SkillSection'
 import styles from '../styles/pages/Home.module.scss'
 export default function Home() {
@@ -17,10 +18,16 @@ export default function Home() {
       <Header isHome={true}/>
       <IntroSection/>
       <AboutSection/>
-      <div style={{background: "var(--bs-white-grey-darker)",width: "100%", margin: "0px"}}>
+      <div style={{
+          background: "var(--bs-white-grey-darker)",
+          width: "100%", 
+          margin: "0px", 
+          padding: "5px 0px", 
+          boxShadow: "inset 0 0px 5px rgba(0,0,0,0.2) "
+        }}>
         <SkillSection/>
-        {/* <hr className={styles.divider}/> */}
-
+        <hr className={styles.divider}/>
+        <ProjectSection/>
       </div>
       <Footer/>
     </>
