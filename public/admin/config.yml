@@ -3,9 +3,9 @@ backend:
   repo: abhinavkrin/avitechlab # Your username and repository
   branch: master # Branch to use
   base_url: https://us-central1-development-and-test-292807.cloudfunctions.net/oauth # The base URL for your Firebase Function
-  auth_endpoint: /oauth/auth # The path to the OAuth endpoint of the function
-  
-publish_mode: editorial_workflows
+  auth_endpoint: /auth # The path to the OAuth endpoint of the function
+
+publish_mode: editorial_workflow
 media_folder: "/public/images/uploads"
 public_folder: "/images/uploads"
 
