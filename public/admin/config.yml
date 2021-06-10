@@ -1,7 +1,7 @@
 backend:
   name: github # Or gitlab
   repo: abhinavkrin/avitechlab # Your username and repository
-  branch: master # Branch to use
+  branch: main # Branch to use
   base_url: https://us-central1-development-and-test-292807.cloudfunctions.net/oauth # The base URL for your Firebase Function
   auth_endpoint: /auth # The path to the OAuth endpoint of the function
 
