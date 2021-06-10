@@ -1,6 +1,6 @@
 import LinkButton from "../LinkButton";
 import styles from "./../../styles/components/home/ProjectCard.module.scss";
-export default function ProjectCard({icon,name,desc,link}){
+export default function ProjectCard({icon,name,desc,link,inDev}){
     return (
             <div className={styles.projectCard}>
                 <div className={styles.projectIconWrapper}>
@@ -14,7 +14,7 @@ export default function ProjectCard({icon,name,desc,link}){
                     {desc}
                 </div>
                 {
-                    link ?
+                    !inDev && link ?
                     <div className={styles.projectLink}>
                         <LinkButton href={link} label="open link"/>
                     </div>

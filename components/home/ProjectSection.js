@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../../styles/components/home/ProjectSection.module.scss'
 import styles2 from '../../styles/components/home/Section.module.scss'
-import {ProjectsList} from '../../lib/projects';
 import ProjectCard from './ProjectCard';
-export default function ProjectSection(){
+export default function ProjectSection({projects}){
+    console.log(projects)
     return (
         <section className={"container "+styles.projectSection}>
             <div className="row">
@@ -12,9 +12,9 @@ export default function ProjectSection(){
                 </div>
             </div>
             <div className="row m-1">
-                {ProjectsList.map((P,i)=>(
+                {projects.map((P,i)=>(
                     <div className="col-12 col-lg-4 p-2" key={P.name+i}>
-                        <ProjectCard icon={P.icon} name={P.name} desc={P.desc} link={P.link}/>
+                        <ProjectCard icon={P.icon} name={P.name} desc={P.desc} link={P.link} inDev={P.in_dev}/>
                     </div>
                 ))}
             </div>
