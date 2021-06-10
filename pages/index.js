@@ -6,8 +6,9 @@ import AboutSection from '../components/home/AboutSection'
 import IntroSection from '../components/home/IntroSection'
 import ProjectSection from '../components/home/ProjectSection.js'
 import SkillSection from '../components/home/SkillSection'
+import { getAllProjects } from '../lib/projects'
 import styles from '../styles/pages/Home.module.scss'
-export default function Home() {
+export default function Home({projects}) {
   return (
     <>
       <Head>
@@ -27,9 +28,27 @@ export default function Home() {
         }}>
         <SkillSection/>
         <hr className={styles.divider}/>
-        <ProjectSection/>
+        <ProjectSection projects={projects}/>
       </div>
       <Footer/>
     </>
   )
+}
+
+
+export async function getStaticProps(context){
+  let projects = [];
+  try {
+    projects = (await getAllProjects()).map(pr => ({
+      ...pr.attributes
+    }));
+  }
+  catch(e){
+    console.error(e);
+  }
+  return {
+    props: {
+      projects
+    }
+  }
 }
