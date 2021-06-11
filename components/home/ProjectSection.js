@@ -3,7 +3,6 @@ import styles from '../../styles/components/home/ProjectSection.module.scss'
 import styles2 from '../../styles/components/home/Section.module.scss'
 import ProjectCard from './ProjectCard';
 export default function ProjectSection({projects}){
-    console.log(projects)
     return (
         <section className={"container "+styles.projectSection}>
             <div className="row">

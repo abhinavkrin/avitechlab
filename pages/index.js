@@ -6,6 +6,7 @@ import AboutSection from '../components/home/AboutSection'
 import IntroSection from '../components/home/IntroSection'
 import ProjectSection from '../components/home/ProjectSection.js'
 import SkillSection from '../components/home/SkillSection'
+import { getAllBlogs } from '../lib/blogs'
 import { getAllProjects } from '../lib/projects'
 import styles from '../styles/pages/Home.module.scss'
 export default function Home({projects}) {
@@ -37,15 +38,20 @@ export default function Home({projects}) {
 
 
 export async function getStaticProps(context){
-  let projects = [];
+  let projects = [], blogs= [];
   try {
-    projects = (await getAllProjects()).map(pr => ({
-      ...pr.attributes
-    }));
+    projects = (await getAllProjects());
   }
   catch(e){
     console.error(e);
   }
+  try {
+    blogs = (await getAllBlogs());
+  }
+  catch(e){
+    console.error(e);
+  }
+  
   return {
     props: {
       projects
