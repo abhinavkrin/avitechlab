@@ -3,6 +3,8 @@ import React from 'react';
 import styles from '../styles/components/Footer.module.scss';
 function Footer({}){
     return (
+        <>
+        <div className={styles.heightFix}></div>
         <footer className={styles.footer}>
             <div className="container">
                 <div className={styles.contactDialog}>
@@ -43,6 +45,7 @@ function Footer({}){
                 </div>
             </div>
         </footer>
+        </>
     )
 }
 

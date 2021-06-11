@@ -1,0 +1,12 @@
+.blog {
+    img {
+        max-width: 100%;
+    }
+    pre{
+        overflow: scroll;
+        background: var(--bs-dark);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+}

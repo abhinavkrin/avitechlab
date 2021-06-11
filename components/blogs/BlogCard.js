@@ -2,23 +2,29 @@ import React from 'react';
 import styles from '../../styles/components/blogs/BlogCard.module.scss';
 import Image from 'next/image';
 import LinkButton from '../LinkButton';
+import Link from 'next/link';
 
-export default function BlogsCard({blog}) {
-    const {id,date,excerpt,html,thumbnail,title,slug} = blog;
-
+export default function BlogCard({blog}) {
+    const {id,date,excerpt,html,thumbnail,title,slug,link} = blog;
     return (
         <div className={styles.blogCard}>
             <div className={styles.blogImageWrapper}>
-                <Image src={thumbnail} height="288" width="512" layout=""/>
+                <Link href={link}>
+                    <a>
+                        <Image src={thumbnail} height="288" width="512" layout=""/>
+                    </a>
+                </Link>
             </div>
             <div className={styles.blogTitle}>
-                {title}
+                <Link href={link}>
+                    {title}
+                </Link>
             </div>
             <div className={styles.blogDate}>
                 {new Date(date).toLocaleString('en-US', {month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric',minute: 'numeric'})}
             </div>
             <div className={styles.blogOpenLink}>
-                <LinkButton href={'/blogs/'+slug} label="Open Link"/>
+                <LinkButton href={link} label="Open Link"/>
             </div>
         </div>
     )
