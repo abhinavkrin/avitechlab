@@ -9,6 +9,10 @@ publish_mode: editorial_workflow
 media_folder: "/public/images/uploads"
 public_folder: "/images/uploads"
 
+site_url: https://avitechlab.vercel.app
+display_url: https://avitechlab.vercel.app
+logo_url: /logo_512x437.png
+
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
