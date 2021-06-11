@@ -1,6 +1,6 @@
 ---
 title: Stress Testing. Finding edge cases where our algorithm fails
-date: 2021-06-11T09:07:29.571Z
+date: 2020-06-11T09:07:29.571Z
 thumbnail: /images/uploads/stress_testing_banner.jpg
 excerpt: ""
 ---

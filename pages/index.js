@@ -3,13 +3,14 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import AboutSection from '../components/home/AboutSection'
+import BlogSection from '../components/home/BlogSection'
 import IntroSection from '../components/home/IntroSection'
 import ProjectSection from '../components/home/ProjectSection.js'
 import SkillSection from '../components/home/SkillSection'
 import { getAllBlogs } from '../lib/blogs'
 import { getAllProjects } from '../lib/projects'
 import styles from '../styles/pages/Home.module.scss'
-export default function Home({projects}) {
+export default function Home({projects,blogs}) {
   return (
     <>
       <Head>
@@ -31,6 +32,7 @@ export default function Home({projects}) {
         <hr className={styles.divider}/>
         <ProjectSection projects={projects}/>
       </div>
+      <BlogSection blogs={blogs}/>
       <Footer/>
     </>
   )
@@ -51,10 +53,11 @@ export async function getStaticProps(context){
   catch(e){
     console.error(e);
   }
-  
+
   return {
     props: {
-      projects
+      projects,
+      blogs
     }
   }
 }
