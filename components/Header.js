@@ -41,7 +41,11 @@ function Header({isHome}){
         <header className={"fixed-top "+styles.header+" "+(isTransparent?styles.transparent:"")}>
             <nav ref={navRef}>
                 <div className={styles.brand}>
-                    <Image src="/images/icon.svg" width="48" height="48"></Image>
+                    <Link href="/">
+                        <a>
+                            <Image src="/images/icon.svg" width="48" height="48"></Image>
+                        </a>
+                    </Link>
                 </div>
                 <div className={styles.toggleButton}>
                     <div className={styles.menuIcon} onClick={toggle}>
@@ -63,7 +67,7 @@ function Header({isHome}){
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
-                            <Link href="#">
+                            <Link href="/blogs/">
                                 <a>Blogs</a>
                             </Link>
                         </li>
