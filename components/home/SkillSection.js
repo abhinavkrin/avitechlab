@@ -9,8 +9,8 @@ export default function SkillSection(){
                     <span className={styles2.sectionTitle}>About Me</span>
                 </div>
             </div>
-            <div className={"row "+styles.fixDividerContainer}>
-                <div className={"col-12 fix-divider"}>
+            <div className={"row m-1 "+styles.fixDividerContainer}>
+                <div className={"col-12 fix-divider p-2"}>
                     <div className={"container "+styles.skills}>
                         <div className="row">
                             <div xs={12} lg={4} className={"col-12 col-lg-4 "+styles.skillCol1}>
