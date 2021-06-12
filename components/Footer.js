@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import styles from '../styles/components/Footer.module.scss';
 function Footer({}){
@@ -16,7 +17,7 @@ function Footer({}){
                             <p className="start-project-text">Interested in working together? Have an Idea in mind? Let us chat.</p>
                         </div>
                         <div className="col-12 col-lg-4 d-flex justify-content-center align-items-center">
-                            <a href={"mailto:"}>
+                            <a href={"mailto:work.abhinavkr@gmail.com"}>
                                 <button className={styles["startProjectButton"]}>Contact Me</button>
                             </a>
                         </div>
@@ -32,10 +33,20 @@ function Footer({}){
                         </span>
                     </div>
                     <div className="col-12 d-flex justify-content-center mb-3">
-                        <Image src="/images/twitter.svg" height="48" width="48" className={styles.footerSocialIcon}/>
-                        <Image src="/images/linkedin.svg" height="48" width="48" className={styles.footerSocialIcon}/>
-                        <Image src="/images/github.svg" height="48" width="48" className={styles.footerSocialIcon}/>
-                        <Image src="/images/blogging.svg" height="48" width="48" className={styles.footerSocialIcon}/>
+                        <a href="https://twitter.com/abhinavkr_in">
+                            <Image src="/images/twitter.svg" height="48" width="48" className={styles.footerSocialIcon}/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abhinavkrin/">
+                            <Image src="/images/linkedin.svg" height="48" width="48" className={styles.footerSocialIcon}/>
+                        </a>
+                        <a href="https://github.com/abhinavkrin">
+                            <Image src="/images/github.svg" height="48" width="48" className={styles.footerSocialIcon}/>
+                        </a>
+                        <Link href="/blogs">
+                            <a>
+                                <Image src="/images/blogging.svg" height="48" width="48" className={styles.footerSocialIcon}/>
+                            </a>
+                        </Link>
                     </div>
                     <div className="col-12 d-flex justify-content-center mb-4">
                         <span className={styles.footerTaglineText}>

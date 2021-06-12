@@ -4,7 +4,7 @@ import styles from '../../styles/components/home/AboutSection.module.scss'
 import styles2 from '../../styles/components/home/Section.module.scss'
 function AboutSection(){
     return (
-        <section className="container">
+        <section className="container" id="about">
             <div className="row">
                 <div className="col-12 d-flex justify-content-center">
                     <span className={styles2.sectionTitle}>About Me</span>
