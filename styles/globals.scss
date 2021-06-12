@@ -6,13 +6,19 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: $text;
 }
 
 a {
-  color: inherit;
+  color:  $primary-light;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3,h4,h5,h6,strong,b, em {
+  color: $text-heading-dark;
+  font-weight: 500;
 }

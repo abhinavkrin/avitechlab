@@ -31,9 +31,9 @@ Let us sort the array 'a' of 'n' numbers. After that, the number a\[n-2\] will b
 C++ code:
 
 ```
-int find2MAXNaive(int \*a,int n){
+int find2MAXNaive(int *a,int n){
     sort(a,a+n);
-    return a\[n-2\];
+    return a[n-2];
 }
 ```
 
@@ -43,17 +43,18 @@ We will first find out the largest number in O(n) time and then find the largest
 
 C++ code:
 
-```int find2MAXFast(int \*a,int n){
+```
+int find2MAXFast(int *a,int n){
     int k, max1, max2;
-    max1 = max2 = INT\_MIN;
+    max1 = max2 = INT_MIN;
     for(int i = 0; i < n; i++){
-        if(max1 < a\[i\]){
-            max1 = a\[i\];
+        if(max1 < a[i]){
+            max1 = a[i];
         }
     }
     for(int i = 0; i < n; i++){
-        if(max2 < a\[i\] && a\[i\] != max1){
-            max2 = a\[i\];
+        if(max2 < a[i] && a[i] != max1){
+            max2 = a[i];
         }
     }
     return max2;
@@ -69,32 +70,32 @@ C++ code:
 ```
 int main()
 {
-    int n,\*a,i,c,ans1,ans2;
+    int n,*a,i,c,ans1,ans2;
     //stress test
     c=1;
     while(1){
         //n will have any value from 2 to 10
-        n = rand()%9 + 2; // n = \[2,10\]  
-        a = new int\[n\];
+        n = rand()%9 + 2; // n = [2,10]  
+        a = new int[n];
         for(i = 0; i < n; i++){
-            //a\[i\] will have any value from 1 to 100
-            a\[i\] = rand()%100 + 1;// a\[i\] = \[1,100\]
+            //a[i] will have any value from 1 to 100
+            a[i] = rand()%100 + 1;// a[i] = [1,100]
         }
 
         // Now my random test data is ready. 
         //Checking if the answer from both the soultions match or not
         if((ans1=find2MAXNaive(a,n)) == (ans2=find2MAXFast(a,n))){
-            cout<<"Test "<<c++<<": OK\\n";
+            cout<<"Test "<<c++<<": OK\n";
         }
         else {
-            cout<<"Error Found!\\n";
-            cout<<"Result from naive solution: "<<ans1<<"\\n";
-            cout<<"Result from fast solution: "<<ans2<<"\\n";
+            cout<<"Error Found!\n";
+            cout<<"Result from naive solution: "<<ans1<<"\n";
+            cout<<"Result from fast solution: "<<ans2<<"\n";
             cout<<"Test data:";
             for(i = 0; i < n; i++){
-                cout<<" "<<a\[i\];
+                cout<<" "<<a[i];
             }
-            cout<<"\\n";
+            cout<<"\n";
             break;
         }
     }
@@ -120,8 +121,8 @@ Let us examine our code.
 
 ```
 for(int i = 0; i < n; i++){
-    if(max2 < a\[i\] && a\[i\] != max1){
-        max2 = a\[i\];
+    if(max2 < a[i] && a[i] != max1){
+        max2 = a[i];
     }
 } 
 ```
@@ -133,18 +134,18 @@ We matched **a\[I\]** with **max1**. While doing so, we ignored all the indices 
 C++ correct code for **find2MAXFast**:
 
 ```
-int find2MAXFast(int \*a,int n){
+int find2MAXFast(int *a,int n){
     int k, max1, max2;
-    max1 = max2 = INT\_MIN;
+    max1 = max2 = INT_MIN;
     for(int i = 0; i < n; i++){
-        if(max1 < a\[i\]){
-            max1 = a\[i\];
+        if(max1 < a[i]){
+            max1 = a[i];
             k = i;
         }
     }
     for(int i = 0; i < n; i++){
-        if(max2 < a\[i\] && k != i){
-            max2 = a\[i\];
+        if(max2 < a[i] && k != i){
+            max2 = a[i];
         }
     }
     return max2;
