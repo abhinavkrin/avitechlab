@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import BlogLayout from '../../layouts/BlogLayout';
 import { getAllBlogsId, getBlog, getNextBlogMeta } from '../../lib/blogs';
 import styles from '../../styles/pages/BlogPost.module.scss';
+import Head from 'next/head';
 export default function BlogPost({blog,dateString,readTime,nextBlog}){
     const {id,date,excerpt,html,thumbnail,title,slug,link} = blog;
     const [shareUrl,setShareUrl] = useState("");
@@ -14,6 +15,9 @@ export default function BlogPost({blog,dateString,readTime,nextBlog}){
     },[])
     return (
         <BlogLayout>
+            <Head>
+                <title>{title} | avitechlab</title>
+            </Head>
             <article className={"container "+styles.article}>
                 <h1 className={styles.blogTitle}>{title}</h1>
                 <div className={styles.blogMeta}>
