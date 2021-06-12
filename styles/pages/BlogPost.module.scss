@@ -29,8 +29,9 @@
             font-size: 1.1rem;
         }
     }
-    .shareIcons {
+    .shareIcons, .shareIcons a {
         display: flex;
+        align-items: center;
     }
     .shareIcons img {
         padding: 3px!important;
