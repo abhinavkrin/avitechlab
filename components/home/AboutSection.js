@@ -29,7 +29,7 @@ function AboutSection(){
             </div>
             <div className="row">
                 <div className="col-12 d-flex justify-content-center align-items-end">
-                    <img src="/images/hero.svg" className={styles.heroImage}/>
+                    <img width="300" height="132" src="/images/hero.svg" className={styles.heroImage}/>
                 </div>
             </div>
         </section>
