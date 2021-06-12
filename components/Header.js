@@ -57,12 +57,12 @@ function Header({isHome}){
                 <div className={styles.navMenu}>
                     <ul className={styles.menuList}>
                         <li className={styles.menuItem}>
-                            <Link href="#">
+                            <Link href="/">
                                 <a>Home</a>
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
-                            <Link href="#">
+                            <Link href="/#about">
                                 <a>About</a>
                             </Link>
                         </li>
@@ -72,9 +72,9 @@ function Header({isHome}){
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
-                            <Link href="#">
-                                <a>Contact</a>
-                            </Link>
+                            <a href="mailto:work.abhinavkr@gmail.com">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </div>

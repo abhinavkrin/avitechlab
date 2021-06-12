@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from '../../styles/components/home/SkillSection.module.scss';
 import styles2 from '../../styles/components/home/Section.module.scss'
+import Image from 'next/image';
+
 export default function SkillSection(){
     return (
         <section className={"container-fluid "+styles.skillSection}>
             <div className="row">
                 <div className="col-12 d-flex justify-content-center">
-                    <span className={styles2.sectionTitle}>About Me</span>
+                    <span className={styles2.sectionTitle}>My Skills</span>
                 </div>
             </div>
             <div className={"row m-1 "+styles.fixDividerContainer}>
@@ -14,8 +16,8 @@ export default function SkillSection(){
                     <div className={"container "+styles.skills}>
                         <div className="row">
                             <div xs={12} lg={4} className={"col-12 col-lg-4 "+styles.skillCol1}>
-                                <div className="skill-icon">
-                                    <img src="/images/phone-link.svg" alt="frontend dev"/>
+                                <div className={styles.skillIcon}>
+                                    <Image height="55" width="55" src="/images/phone-link.svg" alt="frontend dev"/>
                                 </div>
                                 <div className={styles.skillH1}>
                                     <span>Front-end Developer</span>
@@ -35,6 +37,7 @@ export default function SkillSection(){
                                 <div className={styles.skillList}>
                                     <ul>
                                         <li>ReactJS</li>
+                                        <li>NextJS</li>
                                         <li>Bootstrap</li>
                                         <li>Material UI</li>
                                         <li>Redux</li>
@@ -45,8 +48,8 @@ export default function SkillSection(){
                             </div>
 
                             <div xs={12} lg={4} className={"col-12 col-lg-4 "+styles.skillCol2}>
-                                <div className="skill-icon">
-                                    <img src="/images/code.svg" alt="frontend dev"/>
+                                <div className={styles.skillIcon}>
+                                    <Image height="55" width="55" src="/images/code.svg" alt="frontend dev"/>
                                 </div>
                                 <div className={styles.skillH1}>
                                     <span>Back-end Developer</span>
@@ -76,8 +79,8 @@ export default function SkillSection(){
                             </div>
 
                             <div xs={12} lg={4} className={"col-12 col-lg-4 "+styles.skillCol3}>
-                                <div className="skill-icon">
-                                    <img src="/images/self_improvement.svg" alt="frontend dev"/>
+                                <div className={styles.skillIcon}>
+                                    <Image height="55" width="55" src="/images/self_improvement.svg" alt="frontend dev"/>
                                 </div>
                                 <div className={styles.skillH1}>
                                     <span>Blogger & Competitive Programmer</span>
