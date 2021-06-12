@@ -21,15 +21,11 @@ As an example, I will use my college's website. Notices on my college's website 
 
 ## Let us examine the HTML markup of my college's notice webpage.
 
-![](/images/uploads/notice_web_page.webp)
-
-Notice Webpage
+![Notice Webpage](/images/uploads/notice_web_page.webp)
 
 Before starting to code to get notices from the college website. We need to understand the HTML markup of the webpage. To see its source code, right-click anywhere over it and then click on "Inspect". You will find that whole notices data is wrapped in a **table** element with id "ctl00_ContentPlaceHolder1_GridView1". Check the image of the table element given below.
 
-![](/images/uploads/notice_source_code-1.webp)
-
-Source code of table containing the notice data
+![Source code of table containing the notice data](/images/uploads/notice_source_code-1.webp)
 
 As you can see, each notice is wrapped in a **tr** element. Each **tr** element has two **td** child elements. The first **td** element has a **span** child element which contains the title of the notice and a **div** element. Again, the **div** element has an **a** element whose **"href"** attribute has the relative link to the notice pdf file. This was all about the first **td** child of the the **tr** element. Remember that each **tr** element wraps one notice.
 
