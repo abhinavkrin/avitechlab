@@ -8,6 +8,8 @@ $white-grey-darker: #F7F7F7;
 $dividerColor: #E5E5E5;
 $comp-primary: complement($primary);
 $comp-primary-light: complement($primary-light);
+$text-heading-dark: #333333;
+$text: rgba(0,0,0,0.75);
 @import "../node_modules/bootstrap/scss/variables";
 
 

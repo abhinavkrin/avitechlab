@@ -10,7 +10,7 @@ export default function Blogs({blogs}){
              <section className={"container "+styles.blogSection}>
                 <div className="row mt-5 mb-5 ml-1 mr-1">
                     {blogs.map((B,i)=>(
-                        <div className="col-12 col-lg-4 p-3" key={B.id}>
+                        <div className="col-12 col-lg-4 p-3 d-flex justify-content-center" key={B.id}>
                             <BlogCard blog={B}/>
                         </div>
                     ))}

@@ -13,7 +13,7 @@ export default function BlogSection({blogs}){
                 </div>
                 <div className="row m-1">
                     {blogs.map((B,i)=>(
-                        <div className="col-12 col-lg-4 p-2" key={B.id}>
+                        <div className="col-12 col-lg-4 p-2 d-flex justify-content-center" key={B.id}>
                             <BlogCard blog={B}/>
                         </div>
                     ))}
