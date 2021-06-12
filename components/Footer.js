@@ -50,7 +50,7 @@ function Footer({}){
                     </div>
                     <div className="col-12 d-flex justify-content-center mb-4">
                         <span className={styles.footerTaglineText}>
-                            Handcrafted my be.
+                            Handcrafted by me.
                         </span>
                     </div>
                 </div>
