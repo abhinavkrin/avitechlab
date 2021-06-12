@@ -6,6 +6,12 @@ import { getAllBlogsId, getBlog, getNextBlogMeta } from '../../lib/blogs';
 import styles from '../../styles/pages/BlogPost.module.scss';
 export default function BlogPost({blog,dateString,readTime,nextBlog}){
     const {id,date,excerpt,html,thumbnail,title,slug,link} = blog;
+    const [shareUrl,setShareUrl] = useState("");
+    const [shareTextTwitter,setShareTextTwitter] = useState("");
+    useEffect(()=>{
+        setShareUrl(window.location.href);
+        setShareTextTwitter(escape(title)+' '+window.location.href);
+    },[])
     return (
         <BlogLayout>
             <article className={"container "+styles.article}>
@@ -16,9 +22,15 @@ export default function BlogPost({blog,dateString,readTime,nextBlog}){
                 </div>
                 <div className={styles.blogMeta2}>
                     <div className={styles.shareIcons}>
-                        <Image src="/images/facebook_color.svg" height="32" width="32"/>
-                        <Image src="/images/twitter_color.svg" height="32" width="32"/>
-                        <Image src="/images/linkedin_color.svg" height="32" width="32"/>
+                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank">
+                            <Image src="/images/facebook_color.svg" height="32" width="32"/>
+                        </a>
+                        <a href={`https://twitter.com/intent/tweet?text=${shareTextTwitter}`}>
+                            <Image src="/images/twitter_color.svg" height="32" width="32"/>
+                        </a>
+                        <a href={`https://www.linkedin.com/shareArticle/?mini=true&url=${shareUrl}`}>
+                            <Image src="/images/linkedin_color.svg" height="32" width="32"/>
+                        </a>
                     </div>
                     <div>
                         {
