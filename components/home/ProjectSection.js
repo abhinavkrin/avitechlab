@@ -7,7 +7,7 @@ export default function ProjectSection({projects}){
         <section className={"container "+styles.projectSection}>
             <div className="row">
                 <div className="col-12 d-flex justify-content-center">
-                    <span className={styles2.sectionTitle}>My Works</span>
+                    <span className={styles2.sectionTitle}>My Work</span>
                 </div>
             </div>
             <div className="row m-1">
