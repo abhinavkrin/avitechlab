@@ -22,13 +22,13 @@ export default function BlogPost({blog,dateString,readTime,nextBlog}){
                 </div>
                 <div className={styles.blogMeta2}>
                     <div className={styles.shareIcons}>
-                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank">
+                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`} target="_blank" rel="noopener noreferrer">
                             <Image src="/images/facebook_color.svg" height="32" width="32"/>
                         </a>
-                        <a href={`https://twitter.com/intent/tweet?text=${shareTextTwitter}`}>
+                        <a href={`https://twitter.com/intent/tweet?text=${shareTextTwitter}`} target="_blank" rel="noopener noreferrer">
                             <Image src="/images/twitter_color.svg" height="32" width="32"/>
                         </a>
-                        <a href={`https://www.linkedin.com/shareArticle/?mini=true&url=${shareUrl}`}>
+                        <a href={`https://www.linkedin.com/shareArticle/?mini=true&url=${shareUrl}`} target="_blank" rel="noopener noreferrer">
                             <Image src="/images/linkedin_color.svg" height="32" width="32"/>
                         </a>
                     </div>
