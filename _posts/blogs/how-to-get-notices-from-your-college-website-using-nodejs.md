@@ -163,4 +163,4 @@ For this article, I have taken an example of my college website. But, you can ex
 
 Github project link: <https://github.com/abhinavkrin/HeritageNoticeREST>
 
-I have deployed a cloud function that returns notices in JSON: (https://us-central1-development-and-test-292807.cloudfunctions.net/getNotices?page=1)[https://us-central1-development-and-test-292807.cloudfunctions.net/getNotices?page=1]
+I have deployed a cloud function that returns notices in JSON: <https://us-central1-development-and-test-292807.cloudfunctions.net/getNotices?page=1>
