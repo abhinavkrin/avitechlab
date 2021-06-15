@@ -164,5 +164,3 @@ For this article, I have taken an example of my college website. But, you can ex
 Github project link: <https://github.com/abhinavkrin/HeritageNoticeREST>
 
 I have deployed a cloud function that returns notices in JSON: <https://us-central1-development-and-test-292807.cloudfunctions.net/getNotice?page=1>
-
-Add pretty=1 to get notices as HTML table: <https://us-central1-development-and-test-292807.cloudfunctions.net/getNotices?pretty=1&page=1>
