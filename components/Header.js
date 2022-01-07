@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import Link from 'next/link';
 import styles from '../styles/components/Header.module.scss';
+import { getLinks } from '../lib/settings';
 function Header({isHome}){
     const SCROLL_FLAG_POINT = 150;
     const navRef = useRef();
@@ -74,6 +75,11 @@ function Header({isHome}){
                         <li className={styles.menuItem}>
                             <a href="mailto:work.abhinavkr@gmail.com">
                                 Contact
+                            </a>
+                        </li>
+                        <li className={styles.menuItem}>
+                            <a href={getLinks().resume_link}>
+                                My Resume
                             </a>
                         </li>
                     </ul>

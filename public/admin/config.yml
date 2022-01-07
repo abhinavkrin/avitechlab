@@ -14,6 +14,14 @@ display_url: https://avitechlab.vercel.app
 logo_url: /logo_512x437.png
 
 collections:
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Links"
+        name: "links"
+        file: "settings/links.md"
+        fields:
+          - {label: Resume File, name: resume_link, widget: string}
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "_posts/blogs" # The path to the folder where the documents are stored
