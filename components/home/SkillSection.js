@@ -61,7 +61,7 @@ export default function SkillSection(){
                                     <span>Languages I speak:</span>
                                 </div>
                                 <div className={styles.skillText}>
-                                    <p>Javascript (ES6) & Java</p>
+                                    <p>Javascript (ES6), Java & Python</p>
                                 </div>
                                 <div className={styles.skillH2}>
                                     <span>Tools & frameworks:</span>
