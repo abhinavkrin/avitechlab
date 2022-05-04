@@ -1,6 +1,6 @@
 ---
 title: How to get notices from your college website using nodejs.
-date: 2020-11-08T09:13:47.147Z
+date: 2021-10-31T20:15:04.322Z
 thumbnail: /images/uploads/notice-scrapping.jpg
 excerpt: ""
 ---
