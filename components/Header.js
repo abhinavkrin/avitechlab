@@ -73,7 +73,7 @@ function Header({isHome}){
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
-                            <a href="mailto:work.abhinavkr@gmail.com">
+                            <a href="mailto:abhinav@avitechlab.com">
                                 Contact
                             </a>
                         </li>
