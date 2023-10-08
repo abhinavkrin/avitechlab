@@ -40,9 +40,9 @@ export default function BlogPost({blog,dateString,readTime,nextBlog}){
                         {
                             nextBlog && (
                                 <Link href={nextBlog.link}>
-                                    <a>
+                                    
                                         NEXT BLOG
-                                    </a>
+                                    
                                 </Link>
                             )
                         }
@@ -52,7 +52,7 @@ export default function BlogPost({blog,dateString,readTime,nextBlog}){
                 <div dangerouslySetInnerHTML={{__html: html}} className={styles.blog}></div>
             </article>
         </BlogLayout>
-    )
+    );
 }
 
 export async function getStaticPaths(){

@@ -43,9 +43,9 @@ function Header({isHome}){
             <nav ref={navRef}>
                 <div className={styles.brand}>
                     <Link href="/">
-                        <a>
-                            <Image src="/images/icon.svg" width="48" height="48"></Image>
-                        </a>
+
+                        <Image src="/images/icon.svg" width="48" height="48"></Image>
+
                     </Link>
                 </div>
                 <div className={styles.toggleButton}>
@@ -59,17 +59,17 @@ function Header({isHome}){
                     <ul className={styles.menuList}>
                         <li className={styles.menuItem}>
                             <Link href="/">
-                                <a>Home</a>
+                                Home
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
                             <Link href="/#about">
-                                <a>About</a>
+                                About
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
                             <Link href="/blogs/">
-                                <a>Blogs</a>
+                                Blogs
                             </Link>
                         </li>
                         <li className={styles.menuItem}>
@@ -86,7 +86,7 @@ function Header({isHome}){
                 </div>
             </nav>
         </header>
-    )
+    );
 }
 
 export default Header;

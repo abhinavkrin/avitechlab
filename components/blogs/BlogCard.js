@@ -10,13 +10,13 @@ export default function BlogCard({blog}) {
         <div className={styles.blogCard}>
             <div className={styles.blogImageWrapper}>
                 <Link href={link}>
-                    <a>
-                        <Image src={thumbnail} height="288" width="512" layout=""/>
-                    </a>
+
+                    <Image src={thumbnail} height="288" width="512" layout=""/>
+
                 </Link>
             </div>
             <div className={styles.blogTitle}>
-                <Link href={link}>
+                <Link href={link} legacyBehavior>
                     {title}
                 </Link>
             </div>
@@ -27,5 +27,5 @@ export default function BlogCard({blog}) {
                 <LinkButton href={link} label="Open Link"/>
             </div>
         </div>
-    )
+    );
 }
